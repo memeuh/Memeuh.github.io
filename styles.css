@@ -45,7 +45,7 @@ body {
 .image-container img {
   width: 75%;
   height: 75%;
-  object-fit: contain;
+  object-fit: cover;
 }
 
 /* Style the footer */
