@@ -1,20 +1,41 @@
-* {
-  box-sizing: border-box;
-    font-family: Arial, Helvetica, sans-serif;}
-body {
-  margin: 0;
-  font-family: Arial, Helvetica, sans-serif;
+*,
+*::before,
+*::after { 
+    margin: 0; 
+    padding: 0; 
+    box-sizing: border-box; 
 }
 
-.title {
-    color: black;
+/* Column container */
+.container {  
+  display: flex;
+  flex-wrap: wrap;
+}
+
+/* Sidebar/left column */
+.side {
+  flex: 30%;
+  background-color: #f1f1f1;
+  padding: 20px;
+}
+
+/* Main column */
+.main {
+  flex: 70%;
+  background-color: #C3E8BD;
+  padding: 20px;
+}
+
+.button{
+  background-color: #8EB897;
+  color:black;
 }
 /* Add a black background color to the top navigation */
 .topnav {
   background-color: #333;
+  z-index: 1;
   overflow: hidden;
 }
-
 /* Style the links inside the navigation bar */
 .topnav a {
   float: left;
@@ -24,33 +45,465 @@ body {
   text-decoration: none;
   font-size: 17px;
 }
-
 /* Change the color of links on hover */
 .topnav a:hover {
   background-color: #ddd;
   color: black;
 }
-
 /* Add a color to the active/current link */
 .topnav a.active {
   background-color: #9DDBAD;
   color: white;
 }
-.content {
-  background-color: #C3E8BD;
-  padding: 20px;
+
+
+.header {
+  background-color: #8EB897;
+  position:relative;
+  z-index: 3;
+  text-align: center;
+  padding: 20x;
+}
+/* Style the side navigation */
+
+
+.screen {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 40px;
+    background-color: #C3E8BD;
+}
+
+.screen-title {
+    color: black;
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin: 0;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.welcome-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 35px;
+  background-color: p;
 }
 
 
-.image-container img {
-  width: 75%;
-  height: 75%;
-  object-fit: cover;
+
+
+
+.description {
+  
+    color: black;
+    font-size: 1.1rem;
+    font-weight: 400;
+    line-height: 1.6;
+    margin: 0;
+    max-width: 300px;
+}
+
+
+
+.options-container {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  
+}
+
+
+.option-btn {
+    color: black;
+    border: 2px solid rgba(255, 255, 255, 0.3);
+    padding: 15px 20px;
+    border-radius: 10px;
+    font-size: 1rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    backdrop-filter: blur(10px);
+    text-align: left;
+}
+
+.option-btn:hover {
+    background: rgba(255, 255, 255, 0.2);
+    border-color: rgba(255, 255, 255, 0.5);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+}
+
+
+#controls {
+  justify-content: center;
+  margin-top: 20px;
+}
+
+#controls.show {
+  display: flex;
+}
+
+
+
+
+
+.hide {
+  display: none;
+}
+
+img {
+  width: 50%;
+  height: 50%;
+  
+}
+/* ===== RULES SCREEN ===== */
+.rules-content {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+}
+
+.rules-list {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 100%;
+    max-width: 400px;
+}
+
+.rule-item {
+    display: flex;
+    align-items: center;
+    padding: 15px 20px;
+    border-radius: 10px;
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.rule-item span {
+    color: black;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    text-align: center;
+    width: 100%;
+}
+
+/* ===== QUIZ SCREEN ===== */
+.quiz-content {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.quiz-header {
+    display: flex;
+    justify-content: center;
+}
+
+.quiz-info {
+    display: flex;
+    gap: 20px;
+    color: black;
+    font-size: 1rem;
+    font-weight: 500;
+}
+
+.question-counter,
+.timer,
+.score {
+    
+    padding: 8px 15px;
+    border-radius: 20px;
+   
+}
+
+.question-section {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    margin-top: 30px;
+}
+
+.question-text {
+    color: black;
+    font-size: 1.4rem;
+    font-weight: 600;
+    line-height: 1.4;
+    margin: 0;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.options-container {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.option-btn {
+    background: white;
+    color: black;
+    border: 2px solid white;
+    padding: 15px 20px;
+    border-radius: 10px;
+    font-size: 1rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    backdrop-filter: blur(10px);
+    text-align: left;
+}
+
+.option-btn:hover {
+    background-color: white;
+    border-color: black;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+}
+
+.option-btn:disabled {
+    cursor: not-allowed;
+    transform: none;
+}
+
+.option-btn.correct {
+    background: rgba(76, 175, 80, 0.3);
+    border-color: #4CAF50;
+    color: #4CAF50;
+}
+
+.option-btn.incorrect {
+    background: rgba(244, 67, 54, 0.3);
+    border-color: #F44336;
+    color: #F44336;
+}
+
+.quiz-controls {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+/* ===== RESULTS SCREEN ===== */
+.results-content {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+}
+
+.results-stats {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 100%;
+    max-width: 300px;
+}
+
+.stat-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 20px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.stat-label {
+    color: black;
+    font-size: 1rem;
+    font-weight: 500;
+}
+
+.stat-value {
+    color: black;
+    font-size: 1.2rem;
+    font-weight: 700;
+}
+
+.results-message {
+    color: black;
+    font-size: 1.1rem;
+    font-weight: 400;
+    line-height: 1.6;
+    text-align: center;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+/* ===== BUTTONS ===== */
+.button-group {
+    display: flex;
+    gap: 20px;
+    margin-top: 40px;
+}
+
+.btn {
+
+    padding: 12px 25px;
+    border-radius: 50px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    border: none;
+    text-decoration: none;
+    display: inline-block;
+  
+}
+
+.btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+}
+
+.btn-primary {
+    background-color: white;
+    color: black;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.btn-primary:hover {
+    background-color: white;
+}
+
+.btn-secondary {
+    background-color: #5B7553;
+    color: black;
+    border: black;
+}
+
+.btn-secondary:hover {
+    background-color: lilac;
+}
+
+.btn-danger {
+    background-color: rgba(244, 67, 54, 0.8);
+    color: white;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.btn-danger:hover {
+    background-color: rgba(244, 67, 54, 1);
+}
+
+/* ===== RESPONSIVE DESIGN ===== */
+@media (max-width: 768px) {
+    .container {
+        max-width: 90%;
+        padding: 50px 20px;
+        min-height: 500px;
+    }
+    
+    .screen-title,
+    .title {
+        font-size: 2rem;
+    }
+    
+    .description {
+        font-size: 1rem;
+    }
+    
+    .logo {
+        width: 100px;
+    }
+    
+    .quiz-info {
+        flex-direction: column;
+        gap: 10px;
+    }
+    
+    .question-text {
+        font-size: 1.2rem;
+    }
+    
+    .option-btn {
+        padding: 12px 15px;
+        font-size: 0.95rem;
+    }
+    
+    .rules-list {
+        gap: 15px;
+    }
+    
+    .rule-item {
+        padding: 12px 15px;
+    }
+    
+    .rule-item span {
+        font-size: 0.95rem;
+    }
+    
+    .button-group {
+        flex-direction: column;
+        gap: 10px;
+    }
+    
+    .btn {
+        width: 100%;
+        padding: 15px 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .container {
+        padding: 40px 15px;
+        min-height: 450px;
+    }
+    
+    .screen-title,
+    .title {
+        font-size: 1.8rem;
+    }
+    
+    .description {
+        font-size: 0.95rem;
+    }
+    
+    .logo {
+        width: 80px;
+    }
+    
+    .question-text {
+        font-size: 1.1rem;
+    }
+    
+    .option-btn {
+        padding: 10px 12px;
+        font-size: 0.9rem;
+    }
 }
 
 /* Style the footer */
 .footer {
   background-color: #8EB897;
   padding: 20px;
+  position:static;
+  text-align:center;
+  
+}
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
 }
 
+@media (max-width: 600px) {
+  .column {
+    width: 100%;
+  }
+
+
+}
