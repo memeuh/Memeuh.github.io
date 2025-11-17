@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SEO Quiz</title>
+    <link rel="stylesheet" href="styles.css">
+    
+</head>
+<body>
+    <!-- menu navigation -->
+        <div class="topnav">
+                <a class="active" href=index.html>Home</a>
+                <a href="keyconcepts.html">Key Concepts</a>
+                <a href="crawling.html">What is Crawling?</a>
+                <a href="references.html">References</a>
+                <a href="search_appearance.html">Search Appearance </a>
+                <a href="about.html">About</a>
+                <a href="quiz.html">Quiz</a>
+        </div> 
+    
+    
+    <div class="container">
+        <!-- Welcome Screen -->
+        <div class="screen welcome-screen" id="welcome-screen">
+            <div class="welcome-content">
+                <h1 class="title">SEO Quiz</h1>
+                <p class="description">Test your knowledge of SEO!</p>
+                <button class="btn btn-primary" id="start-quiz-btn">Start Quiz</button>
+            </div>
+        </div>
+
+        <!-- Rules Screen -->
+        <div class="screen rules-screen" id="rules-screen" style="display: none;">
+            <div class="rules-content">
+                <h2 class="screen-title">Quiz Rules</h2>
+                <div class="rules-list">
+                    <div class="rule-item">
+                        <span>You will have 15 seconds to answer each question</span>
+                    </div>
+                    <div class="rule-item">
+                        <span>You can only select one answer per question</span>
+                    </div>
+                    <div class="rule-item">
+                        <span>You cannot go back to previous questions</span>
+                    </div>
+                    <div class="rule-item">
+                        <span>You will get points for each correct answer</span>
+                    </div>
+                    <div class="rule-item">
+                        <span>Your final score will be displayed at the end</span>
+                    </div>
+                </div>
+                
+                <div class="button-group">
+                    <button class="btn btn-secondary" id="exit-rules-btn">Exit Quiz</button>
+                    <button class="btn btn-primary" id="continue-quiz-btn">Continue</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Quiz Screen -->
+        <div class="screen quiz-screen" id="quiz-screen" style="display: none;">
+            <div class="quiz-content">
+                <div class="quiz-header">
+                    <div class="quiz-info">
+                        <span class="question-counter" id="question-counter">Question 1 of 10</span>
+                        <span class="timer" id="timer">Time: 15s</span>
+                        <span class="score" id="score">Score: 0</span>
+                    </div>
+                </div>
+                
+                <div class="question-section">
+                    <h2 class="question-text" id="question-text"></h2>
+                    <div class="options-container" id="options-container"></div>
+                </div>
+                
+                <div class="quiz-controls">
+                    <button class="btn btn-danger" id="stop-quiz-btn">Stop Quiz</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Results Screen -->
+        <div class="screen results-screen" id="results-screen" style="display: none;">
+            <div class="results-content">
+                <h2 class="screen-title" id="results-title">Quiz Complete!</h2>
+                <div class="results-stats">
+                    <div class="stat-item">
+                        <span class="stat-label">Questions Answered:</span>
+                        <span class="stat-value" id="questions-answered">0/50</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-label">Your Score:</span>
+                        <span class="stat-value" id="final-score">0/50</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-label">Percentage:</span>
+                        <span class="stat-value" id="percentage">0%</span>
+                    </div>
+                </div>
+                <div class="results-message" id="results-message"></div>
+                <div class="button-group">
+                    <button class="btn btn-primary" id="restart-quiz-btn">Restart Quiz</button>
+                    <button class="btn btn-secondary" id="back-home-btn">Back to Home</button>
+                </div>
+            </div>
+        </div>
+    </div>
+ <div class="footer">
+        <h4>This website is a school project for IT 3203 at Kennesaw State University</h4>
+            <a href= "https://ksuweb.github.io/IT3203/">Ksu's Class Website</a>
+        </div>
+        
+    <script src="script.js"></script>
+</body>
+</html>
