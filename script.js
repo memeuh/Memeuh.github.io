@@ -1,4 +1,4 @@
- const QUIZ_QUESTIONS = [
+const QUIZ_QUESTIONS = [
     {
         question: "What is Crawling?",
         options: ["An automated program that scans and downloads web pages", "A program that analyzes a website's data", 
@@ -58,6 +58,7 @@
 
   
 ];
+
 const QuizState = {
     currentQuestionIndex: 0,
     score: 0,
@@ -97,6 +98,7 @@ const Elements = {
         message: document.getElementById('results-message')
     }
 };
+
 const Utils = {
     shuffleArray(array) {
         const shuffled = [...array];
