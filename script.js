@@ -1,4 +1,4 @@
-const QUIZ_QUESTIONS = [
+ const QUIZ_QUESTIONS = [
     {
         question: "What is Crawling?",
         options: ["An automated program that scans and downloads web pages", "A program that analyzes a website's data", 
@@ -58,7 +58,6 @@ const QUIZ_QUESTIONS = [
 
   
 ];
-
 const QuizState = {
     currentQuestionIndex: 0,
     score: 0,
@@ -98,7 +97,6 @@ const Elements = {
         message: document.getElementById('results-message')
     }
 };
-
 const Utils = {
     shuffleArray(array) {
         const shuffled = [...array];
@@ -290,4 +288,3 @@ const Quiz = {
 document.addEventListener('DOMContentLoaded', () => {
     Quiz.init();
 });
-/*citation https://medium.com/@ayobademakinde/building-a-javascript-quiz-app-with-50-questions-codecamp-64421bc2ebcb */
