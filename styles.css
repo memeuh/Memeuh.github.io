@@ -13,24 +13,14 @@
   flex-wrap: wrap;
 }
 
-/* Sidebar/left column */
-.side {
-  flex: 30%;
-  background-color: #f1f1f1;
-  padding: 20px;
-}
-
 /* Main column */
 .main {
   flex: 70%;
   background-color: #C3E8BD;
   padding: 20px;
+    border: 1px solid transparent;
 }
 
-.button{
-  background-color: #8EB897;
-  color:black;
-}
 /* Add a black background color to the top navigation */
 .topnav {
   background-color: #333;
@@ -56,8 +46,7 @@
   background-color: #9DDBAD;
   color: white;
 }
-
-
+/*site header*/
 .header {
   background-color: #8EB897;
   position:relative;
@@ -65,7 +54,7 @@
   text-align: center;
   padding: 20x;
 }
-/* Style the side navigation */
+
 
 
 .screen {
@@ -77,14 +66,7 @@
     background-color: #C3E8BD;
 }
 
-.screen-title {
-    color: black;
-    font-size: 2.5rem;
-    font-weight: 700;
-    margin: 0;
-    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
-}
-
+/*quiz welcome screen*/
 .welcome-content {
     display: flex;
     flex-direction: column;
@@ -92,10 +74,6 @@
     gap: 35px;
   background-color: p;
 }
-
-
-
-
 
 .description {
   
@@ -116,28 +94,6 @@
   
 }
 
-
-.option-btn {
-    color: black;
-    border: 2px solid rgba(255, 255, 255, 0.3);
-    padding: 15px 20px;
-    border-radius: 10px;
-    font-size: 1rem;
-    font-weight: 500;
-    cursor: pointer;
-    transition: all 0.3s ease;
-    backdrop-filter: blur(10px);
-    text-align: left;
-}
-
-.option-btn:hover {
-    background: rgba(255, 255, 255, 0.2);
-    border-color: rgba(255, 255, 255, 0.5);
-    transform: translateY(-2px);
-    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
-}
-
-
 #controls {
   justify-content: center;
   margin-top: 20px;
@@ -147,19 +103,11 @@
   display: flex;
 }
 
-
-
-
-
 .hide {
   display: none;
 }
 
-img {
-  width: 50%;
-  height: 50%;
-  
-}
+
 /* ===== RULES SCREEN ===== */
 .rules-content {
     width: 100%;
@@ -352,7 +300,6 @@ img {
 }
 
 .btn {
-
     padding: 12px 25px;
     border-radius: 50px;
     font-size: 1rem;
@@ -403,9 +350,9 @@ img {
 /* ===== RESPONSIVE DESIGN ===== */
 @media (max-width: 768px) {
     .container {
-        max-width: 90%;
+        max-width: 100%;
         padding: 50px 20px;
-        min-height: 500px;
+        display: flex;
     }
     
     .screen-title,
@@ -417,9 +364,6 @@ img {
         font-size: 1rem;
     }
     
-    .logo {
-        width: 100px;
-    }
     
     .quiz-info {
         flex-direction: column;
@@ -473,10 +417,6 @@ img {
         font-size: 0.95rem;
     }
     
-    .logo {
-        width: 80px;
-    }
-    
     .question-text {
         font-size: 1.1rem;
     }
@@ -499,12 +439,4 @@ img {
   content: "";
   display: table;
   clear: both;
-}
-
-@media (max-width: 600px) {
-  .column {
-    width: 100%;
-  }
-
-
 }
