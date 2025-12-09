@@ -19,8 +19,8 @@ const QUIZ_QUESTIONS = [
     },
     {
         question: "What is structured data?",
-        options: ["Data that has been processed and analyzed", "Data from user input", "Raw data"],
-        answer: "Data that has been processed and analyzed"
+        options: ["Data that has been processed and analyzed", "Data from user input", "Raw data", "Extra information coded into a site's html to make it more visible to search engines"],
+        answer: "Extra information coded into a site's html to make it more visible to search engines"
     },
     {
         question: "What is a Sitemap?",
